@@ -1,0 +1,86 @@
+.Go{
+    text-decoration: none;
+    color:rgb(0, 153, 255);
+}
+.Go:hover{
+    color: rgb(183, 0, 255);
+}
+.Java{
+    text-decoration: none;
+    color:rgb(0, 153, 255) ;
+}
+.Java:hover{
+    color: rgb(183, 0, 255);
+}
+.Web{
+    text-decoration: none;
+    color: rgb(0, 153, 255);
+}
+.Web:hover{
+    color: rgb(183, 0, 255);   
+}
+.button_1{
+    width: 230px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background-color: rgb(106, 212, 0);
+    cursor: pointer;
+    font-size: 20px;
+
+
+    color:#00c6ff;
+    text-decoration:none;
+    text-align:center;
+    display: block;
+    background-image: linear-gradient(to left,transparent,transparent 50%,#00c6ff 50%,#00c6ff);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+    font: 400 18px tahoma;
+}
+.button_1:hover{
+    -webkit-box-shadow: -3px -15px 60px -3px rgba(18, 105, 20, 0.54) inset;
+    -moz-box-shadow: -3px -15px 60px -3px rgba(18, 105, 20, 0.54) inset;
+    box-shadow: -3px -15px 60px -3px rgba(18, 105, 20, 0.54) inset;
+    background-position: 0 0;
+    color:#fff;
+}
+.button_2{
+    width: 230px;
+    height: 35px;
+    border-radius: 7px;
+    font-size: 20px;
+    cursor: pointer;
+    border-color: rgb(0, 153, 255);
+    outline: none;
+}
+.button_2:hover{
+    -webkit-box-shadow: -3px -15px 60px -3px rgba(18, 105, 20, 0.54) inset;
+    -moz-box-shadow: -3px -15px 60px -3px rgba(18, 105, 20, 0.54) inset;
+    box-shadow: -3px -15px 60px -3px rgba(18, 105, 20, 0.54) inset;
+}
+.button{
+    background-color: white;
+    width: 280px;
+    height: 50px;
+    /*border: 0px;*/
+    text-align: left;
+    padding-left: 18px;
+    color: rgb(0, 153, 255);
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    font-size: 15px;
+}
+.button:hover{
+    text-decoration: underline;
+    -webkit-box-shadow: -1px 2px 2px 1px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: -1px 2px 2px 1px rgba(34, 60, 80, 0.6);
+    box-shadow: -1px 2px 2px 1px rgba(34, 60, 80, 0.6);
+}
+.h2{
+    font-family: 'Roboto', sans-serif;
+}
