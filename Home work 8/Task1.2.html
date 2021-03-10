@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .list1{
+        list-style: none;
+        counter-reset: li; 
+    }
+    .list1 li{
+        border:solid blue 2px;
+        margin-top: 2px;
+        width: 200px;
+        padding: 3px;
+        font-weight: bolder;
+        font-size: 17px;
+        cursor: pointer;
+    }
+    .list1 li::before{
+        content: counter(li);
+        counter-increment: li;
+        content: counters(li, ".") ". ";
+    }
+    li:hover{
+        background-color: green;
+    }
+    li:hover~li{
+        background-color: red;
+    }
+    .LIST{
+        width: 300px;
+        margin-left: 40%;
+    }
+</style>
+
+<body>
+    <div class="LIST">
+        <ol class="list1">
+            <li>пункт li</li>
+            <li>пункт li</li>
+            <li>пункт li</li>
+            <li>пункт li</li>
+            <li>пункт li</li>
+            <li>пункт li</li>
+            <li>пункт li</li>
+            <li>пункт li</li>
+            <li>пункт li</li>
+            <li>пункт li</li>
+        </ol>
+    </div>
+</body>
+</html>
