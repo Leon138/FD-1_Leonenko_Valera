@@ -1,0 +1,446 @@
+html,body{
+    margin: 0;
+}
+div::selection {
+    background: #F03;
+    color: white;
+}
+p::selection {
+    background: #F03;
+    color: white;
+}
+span::selection {
+    background: #F03;
+    color: white;
+}
+a::selection {
+    background: #F03;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+.video{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    object-fit: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    transition: all .3s ease;
+    z-index: 1;
+}
+.header.out {
+    transform: translateY(-100%);
+}
+.header a{
+    color: white;
+}
+.header a:hover::after{
+    width: 0px;
+    color: white;
+}
+.logo > img{
+    width: 100px;
+    cursor: pointer;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.logo > a{
+    width: 110px;
+    height: 82px;
+    position: absolute;
+}
+.line_1{
+    width: 90%;
+    height: 2px;
+    background-color: red;
+}
+.line_2{
+    height: 2px;
+    background-color: red;
+    width: 90%;
+}
+
+
+/* скрываем чекбокс */
+#menu__toggle {
+    display: none;
+}
+.hamburger-menu{
+    z-index: 20;
+}
+  /* стилизуем кнопку */
+.menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+.header_burger_text{
+    padding-left: 34px;
+    font-size: 19px;
+    color: red;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+  /* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff0000;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+  /* контейнер меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ffffffd7;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+  /* элементы меню */
+.menu__item {
+    display: block;
+    padding: 16px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.menu__item::after{
+    margin-top: 7px;
+    background-color: red;
+    display: block;
+    content: "";
+    height: 2.5px;
+    width: 0%;
+    transition: width 0.4s ease-in-out; 
+}
+.menu__item:hover::after{
+    width: 100%;
+}
+.menu__item:hover {
+    background-color: #948d8d;   
+}
+#menu__toggle:checked ~ .menu__btn > .header_burger_text{
+    display: none;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin:20px 0px 40px 0px;
+}
+.info > img{
+    width: 130px;
+    height: 43px;
+    margin-left: 10px;
+}
+
+/* Ауди центр минск */
+.info_center_minsk{
+    display: flex;
+    margin-bottom: 30px;
+    background-color: #e4e4e463;
+} 
+.container_map_minsk{
+    width: 55%;
+}
+.container_map_minsk img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 60% 0%;
+}
+.nazvanie{
+    display: flex;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;   
+    align-items: center;
+    font-size: 1.2vw;
+}
+.name_center_minsk{
+    width: 45%;
+}
+.nazvanie > span:nth-child(1){
+    color: red;
+    font-weight: bold;
+    margin-right: 7px;
+    font-family: 'Montserrat', sans-serif;
+}
+.info_text{
+    padding: 0px 30px 0px 30px;
+    font-size: 1.2vw;
+    font-family: 'Orbitron', sans-serif;   
+}
+.info_text > a:hover::after{
+    width: 0%;
+} 
+/* Ауди Центр Гомель */
+.info_center_gomel {
+    display: flex;
+    margin-bottom: 30px;
+    background-color: #e4e4e463;
+}
+.container_map_gomel{
+    width: 90%;
+}
+.info_center_gomel img{
+    width: 100%;
+    height: 100%;
+}
+.name_center_gomel > div > span{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 7px;
+}
+/* модальное окно */
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    transition: opacity 400ms ease-in;
+    display: none; 
+    pointer-events: none;
+}
+.modalDialog:target {
+    display: block;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 26px 20px 17px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999); 
+}
+.close {
+    background: #606061;
+    color: #60e6c5;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 27px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px; 
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: red}
+.close:hover::after{
+    width: 0%;
+}
+.form{
+    display:flex; 
+    justify-content:center;
+    padding:10px 10px 5px 10px; 
+}
+form{
+    width: 300px;
+}
+.form > form > div{
+    padding-bottom: 20px;
+}
+.margin_input{
+   text-align: right;
+}
+.margin_input > label{
+    float: left;
+}
+.Select_1{
+    width: 163px;
+}
+
+.form > form > button{
+  padding: 10px 0;
+  border-width: 0px;
+  display: block;
+  width: 120px;
+  margin: 10px auto 0;
+  background: #60e6c5;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  text-transform: uppercase;
+  border-radius: 25px;
+  transition: 0.2s linear;
+   
+}
+.form > form > button:hover{
+    background-color: red;
+    box-shadow: -1px 2px 2px 3px rgba(34, 60, 80, 0.6);
+    transition: 0.2s linear;
+    transform: scale(1.1);
+    border-width: 2px;
+}
+
+.headline{
+    padding-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;   
+}
+.tools_and_services{
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.col{
+    width: 100%;
+    padding-right: 5px;
+}
+.col > img{
+    width: 100%;
+}
+.shine-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgb(43, 43, 43);
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    transition: .5s linear;
+}
+.shine-button:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+    transition: .3s ease-in-out;
+}
+.shine-button:hover {
+    background: #ff0000dc;
+    color: #fff;
+    transform:none;
+}
+.shine-button:hover:before {
+    left: 150px;
+    transition: .3s ease-in-out;
+}
+.shine-button:hover::after{
+    width: 0%;
+}
+.footer_content{
+    background-color: rgb(76,76,76) ;
+    /* position: fixed; */
+    height: 250px;
+    width: 100%;
+}
+.footer_support{
+    display: flex;
+    justify-content: center;
+}
+.footer_support > ul{
+    display: flex;
+}
+.footer_support > ul >li{
+    list-style-type: none;
+    padding-left: 50px;
+}  
+.footer_support > ul > li >span{
+    display: flex;
+    color: white;
+}
+.footer_support > ul > li:nth-child(2) > img{
+    padding-left: 10px;
+}
+.footer_support > ul > li:nth-child(3) > img{
+    padding-left: 50px;
+}
+.footer_link{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+.footer_link > a{
+    color: white;
+    padding-left: 50px;
+}
+.footer_icons{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+.footer_icons > img{
+    padding-left: 20px;
+}

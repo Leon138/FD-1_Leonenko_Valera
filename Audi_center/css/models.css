@@ -1,0 +1,77 @@
+body{
+    background-color: #e4e4e4f3;
+}
+img::selection {
+    background: #F03;
+    color: white;
+}
+.span_models{
+    font-size: 60px;
+    margin: 55px 0px 30px 20px;
+    font-family: 'Orbitron', sans-serif;   
+    font-weight: 700;       
+}
+img{
+    width: 100%;
+}
+h3 > span:nth-child(1){
+    font-size: 22px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+h3 > span:nth-child(2){
+    font-family: 'Exo 2', sans-serif; 
+    font-weight: 600;
+}
+.title{
+    font-size: 70px;
+    margin-left: 20px;
+    font-family: 'Oswald', sans-serif; 
+    font-weight: 800; 
+}
+.Audi_A3{
+    display: flex;   
+}
+.container_audi{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    max-width: 482px;
+    margin-bottom: 60px;
+}
+.wrap{
+    display: flex;
+}
+
+.shine-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    /* margin: 10px 20px; */
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    transition: .5s linear;
+}
+.shine-button:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+    transition: .5s ease-in-out;
+}
+.shine-button:hover {
+    background: #ff0000dc;
+    color: #fff;
+}
+.shine-button:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}

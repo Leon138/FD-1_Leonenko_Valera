@@ -1,0 +1,68 @@
+body{
+    background-color: #e4e4e4f3;
+}
+.test_drive_img{
+   display: flex;
+   justify-content: center;
+   margin-top: 53px;
+}
+.test_drive_img > img{
+    width: 90%;
+    height: 40vw;
+}
+.row{
+    padding: 20px 0px 10px 115px;
+}
+.row > span{
+    font-family:'Oswald', sans-serif;
+}
+p{
+    font-size: 22px;
+    word-spacing: 2px;
+    line-height: 30px;
+    font-family:'Oswald', sans-serif;
+}
+.form_drive{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.form_drive > form{
+    line-height: 50px;
+}
+.form_drive > form > span{
+    display: block;
+    text-align: center;
+    font-family:'Oswald', sans-serif;
+    font-size: 20px;
+}
+.input_select{
+    width: 350px;
+    height: 40px;
+    margin-bottom: 15px;
+    border: 2px solid #bbb; 
+    transition:  .2s linear; 
+}
+.input_select:focus{  
+  outline: none;
+  font-size: 17px;
+  border-color:  rgb(226, 32, 32) ;
+  font-family:'Oswald', sans-serif;
+  box-shadow: 0px 0px 4px 2px rgba(247, 25, 4, 0.93);
+  transition:  .2s linear;
+}
+select:hover{
+   cursor: pointer;
+}
+.form_drive > form > button{
+    position: absolute;
+    left: 0px;
+    right: 0px; 
+    margin: 0 auto;
+    width: 120px;
+    height: 35px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 17px;
+}
